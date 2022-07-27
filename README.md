@@ -54,6 +54,9 @@ gradlew cucumber
 3) Above command will build the project along with test cases.
 4) If you something like below text on terminal, means project ran successfully locally. 
 
+  ![image](https://user-images.githubusercontent.com/5866143/181180840-efb88725-0d0e-4d9e-b62a-6d10da75f5bd.png)
+
+
 ## Running on JSON-Server locally.
 1) Changes made to https://jsonplaceholder.typicode.com does not really add/update any data in the their backend system.
 2) Solution is to use some local mocked server with their data. please follow this [steps to install JSON-Server locally](https://www.npmjs.com/package/json-server) to setup the local server.
@@ -71,6 +74,8 @@ Here are a below steps to get a human readable html report.
 4) Find the html based cucumberReport inside "/cucumberReports" directory.
 5) Find the html based extentReport inside "/extentReport" directory.
 ````
+ ![image](https://user-images.githubusercontent.com/5866143/181181556-bf1d73af-325a-4001-ad90-fc025591d195.png)
+
 
 ## Solution include
 1. Logging -> On console screen and under "executionReports\generatedLogs\Logs.log" directory.

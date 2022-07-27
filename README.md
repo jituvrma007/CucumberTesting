@@ -29,6 +29,7 @@ This project is covering some basic Api automation test framework and some sampl
 
 ```
 
+
 ### Dependencies
 Here are the dependencies used in the project for development & testing perspective. 
 <br/> Note - All are open source project and widely available over the web. Setup the maching dependencies to test the code further.
@@ -38,6 +39,17 @@ Here are the dependencies used in the project for development & testing perspect
 * [RestAssured](http://rest-assured.io/) - Accessing the APIs Response
 * [TestNG](https://testng.org/doc/) - Unit Testing framework for Java 
 * [ExtentReports](http://extentreports.com/) - Reporting framework for our tests
+
+
+## Solution include
+1. Layers - Layers like, BaseSetup, Utility, Request API details, and Environment layers are done. Since it is just a sample project, we can design and extend this framework to scale further
+
+2. Run tests in parallel mode -> Yes from runner we are overriding the Dataprovider and making "parallel = true". if we remove this overridden method then we will be able to run one by one.
+
+3. Generating html human readable report -> Yes, html reports are being generated with using utility ExtentReports and CucumberReports. It is covering the detailed steps, pass/fail/skipped results and with the respective time line. It is super easy to understand and to analyze supports detailed charts as well.
+
+4. Logging -> On console screen and under "executionReports\generatedLogs\Logs.log" directory.
+
 
 ## Getting Started
 The below steps will get you a copy of the project up and running, on your local machine for development and testing purposes. 
@@ -66,7 +78,6 @@ gradlew cucumber
   ![image](https://user-images.githubusercontent.com/5866143/181182813-3b02800e-3392-41b7-b3ac-a3b9cc0c3219.png)  
 
 
-
 ## Reports
 Here are a below steps to get a human readable html report.
 ```
@@ -78,12 +89,3 @@ Here are a below steps to get a human readable html report.
 ````
  ![image](https://user-images.githubusercontent.com/5866143/181181556-bf1d73af-325a-4001-ad90-fc025591d195.png)
 
-
-## Solution include
-1. Logging -> On console screen and under "executionReports\generatedLogs\Logs.log" directory.
-
-2. Generating html human readable report -> Yes, html reports are being generated with using utility ExtentReports and CucumberReports. It is covering the detailed steps, pass/fail/skipped results and with the respective time line. It is super easy to understand and to analyze supports detailed charts as well.
-
-3. Layers - Layers like, BaseSetup, Utility, Request API details, and Environment layers are done. Since it is just a sample project, we can design and extend this framework to scale further
-
-4. Run tests in parallel mode -> Yes from runner we are overriding the Dataprovider and making "parallel = true". if we remove this overridden method then we will be able to run one by one.

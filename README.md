@@ -23,7 +23,7 @@ This project is covering some basic Api automation test framework and some sampl
 │   │   └── cucumberTest
 │   │ 		├── apiDetails
 │   │   	├── environments
-│   │   	└── featureFiles
+│   │   	├── featureFiles
 │   │   	├── schema
 │   │   	└── testSuites
 
@@ -53,6 +53,15 @@ gradlew cucumber
 ````
 3) Above command will build the project along with test cases.
 4) If you something like below text on terminal, means project ran successfully locally. 
+
+## Running on JSON-Server locally.
+```
+1) Changes made to https://jsonplaceholder.typicode.com does not really add/update any data in the their backend system.
+2) Solution is to use some local mocked server with their data. please follow this [steps to install JSON-Server locally] (https://www.npmjs.com/package/json-server) to setup the local server.
+3) Use the attached db.json file instead of creating the file, from the project home directory.
+4) Configure a "HOST" variable as "local" in command prompt or in edit configuration (if running via IDE) --> This variable is read for the configuration then our tests will targetted locally.
+5) Start local server manually --> json-server --watch db.json 
+````
 
 ## Reports
 Here are a below steps to get a human readable html report.

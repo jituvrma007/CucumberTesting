@@ -72,7 +72,7 @@ gradlew cucumber
 1) Run after importing into IDE(Intelij). Followed by running respective feature files from "featureFiles" folder or "featureFiles" folder itself.
 2) Run the testNG suite ".xml" files, inside "testSuites" folder.
 3) Run "gradlew test" from command line. 
-4) Run the specific testNG test suites from command line as "gradlew test -Pregression"
+4) Run the specific classes from command line as "gradlew :clean :test --tests "com.cucumberTesting.tests.runner.CommentsOnPostsRunner"
 
 ## Running on JSON-Server locally.
 1) Changes made to https://jsonplaceholder.typicode.com does not really add/update any data in the their backend system.

@@ -68,6 +68,11 @@ gradlew cucumber
 
   ![image](https://user-images.githubusercontent.com/5866143/181180840-efb88725-0d0e-4d9e-b62a-6d10da75f5bd.png)
 
+## More ways of runing tests
+1) Run after importing into IDE(Intelij). Followed by running respective feature files from "featureFiles" folder or "featureFiles" folder itself.
+2) Run the testNG suite ".xml" files, inside "testSuites" folder.
+3) Run "gradlew test" from command line. 
+4) Run the specific testNG test suites from command line as "gradlew test -Pregression"
 
 ## Running on JSON-Server locally.
 1) Changes made to https://jsonplaceholder.typicode.com does not really add/update any data in the their backend system.

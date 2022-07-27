@@ -38,6 +38,7 @@ Here are the dependencies used in the project for development & testing perspect
 * [Gradle 7.5](https://gradle.org/install/) - Dependency Management
 * [RestAssured](http://rest-assured.io/) - Accessing the APIs Response
 * [TestNG](https://testng.org/doc/) - Unit Testing framework for Java 
+* [Cucumber](https://cucumber.io/) - BDD framework 7.4.1
 * [ExtentReports](http://extentreports.com/) - Reporting framework for our tests
 
 

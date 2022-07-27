@@ -43,13 +43,15 @@ Here are the dependencies used in the project for development & testing perspect
 
 
 ## Solution include
-1. Layers - Layers like, BaseSetup, Utility, Request API details, and Environment layers are done. Since it is just a sample project, we can design and extend this framework to scale further
+1. Abstraction Layers - Layers like, BaseSetup, Utility, Request API details, and Environment, testRunners are done. Since it is just a sample project, we can design and extend this framework to scale further
 
 2. Run tests in parallel mode -> Yes from runner we are overriding the Dataprovider and making "parallel = true". if we remove this overridden method then we will be able to run one by one.
 
 3. Generating html human readable report -> Yes, html reports are being generated with using utility ExtentReports and CucumberReports. It is covering the detailed steps, pass/fail/skipped results and with the respective time line. It is super easy to understand and to analyze supports detailed charts as well.
 
 4. Logging -> On console screen and under "executionReports\generatedLogs\Logs.log" directory.
+
+5. JSON Schema Validation -> We validate the JSON response with the respective schema stored inside "schema" directory in the project. 
 
 
 ## Getting Started

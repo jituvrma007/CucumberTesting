@@ -1,5 +1,8 @@
-# CucumberTesting :about the project
-This is a sample backend/Api automation project for the service: https://jsonplaceholder.typicode.com using Java, RestAssured, Cucumber, and Gradle.
+# CucumberTesting : about the project
+This is a sample backend/Api automation project for testing restful APIs of a social network. Starting from simple functionality, it consists of a couple of APIs that allows you to make posts, comments on posts and list the existing users. All the respective Api and the documentation can be found here: https://jsonplaceholder.typicode.com.
+
+### A bit more about the project
+This project is covering some basic Api automation test framework and some sample test cases. Although, we can surely enhance it more with lots of robust features.
 
 ### Project structure
 ```
@@ -30,9 +33,9 @@ This is a sample backend/Api automation project for the service: https://jsonpla
 Here are the dependencies used in the project for development & testing perspective. 
 <br/> Note - All are open source project and widely available over the web. Setup the maching dependencies to test the code further.
 
-* [Java 17](https://www.java.com/en/) - Coding Language
+* [Java 17](https://www.java.com/en/) - Programming Language
 * [Gradle 7.5](https://gradle.org/install/) - Dependency Management
-* [RestAssured](http://rest-assured.io/) - Used to get API Response
+* [RestAssured](http://rest-assured.io/) - Accessing the APIs Response
 * [TestNG](https://testng.org/doc/) - Unit Testing framework for Java 
 * [ExtentReports](http://extentreports.com/) - Reporting framework for our tests
 
@@ -50,3 +53,13 @@ gradlew cucumber
 ````
 3) Above command will build the project along with test cases.
 4) If you something like below text on terminal, means project ran successfully locally. 
+
+## Reports
+Here are a below steps to get a human readable html report.
+```
+1) Navigate to respective directory where the project is stored locally.
+2) Navigate to /executionReports directory.
+3) Find the logs inside "/generatedLogs" directory.
+4) Find the html based cucumberReport inside "/cucumberReports" directory.
+5) Find the html based extentReport inside "/extentReport" directory.
+````

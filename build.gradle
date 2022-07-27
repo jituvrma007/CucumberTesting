@@ -1,0 +1,75 @@
+plugins {
+    id 'java'
+    id "com.github.spacialcircumstances.gradle-cucumber-reporting" version "0.1.24"
+}
+
+group 'org.cucumbertest'
+version '1.0-SNAPSHOT'
+
+targetCompatibility = JavaVersion.VERSION_17
+sourceCompatibility = JavaVersion.VERSION_17
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.36'
+    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.36'
+    implementation group: 'net.masterthought', name: 'cucumber-reporting', version: '5.7.2'
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.4.1'
+    implementation group: 'io.cucumber', name: 'cucumber-jvm-deps', version: '1.0.6'
+    implementation group: 'io.cucumber', name: 'cucumber-testng', version: '7.3.4'
+    implementation group: 'tech.grasshopper', name: 'extentreports-cucumber7-adapter', version: '1.7.0'
+
+    implementation group: 'com.jayway.jsonpath', name: 'json-path', version: '2.7.0'
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.9.0'
+    implementation group: 'org.json', name: 'json', version: '20220320'
+    implementation group: 'org.testng', name: 'testng', version: '7.3.4'
+    implementation group: 'io.rest-assured', name: 'rest-assured', version: '5.1.1'
+    implementation group: 'io.rest-assured', name: 'json-schema-validator', version: '5.1.1'
+
+}
+
+ext{
+    suiteFile ='TagsRunnerTestSuite.xml'
+    if (project.hasProperty('regression')) {
+        suiteFile = "AllFeatureRunnerTestSuite.xml"
+    }
+}
+
+test {
+    useTestNG() {
+        scanForTestClasses = false
+       //suites "src/test/resources/cucumberTest/testSuites/" + suiteFile
+    }
+}
+
+cucumberReports {
+    outputDir = file('executionReports/cucumberReports/')
+    buildId = '0'
+    reports = files('executionReports/cucumberReports/cucumber.json')
+    testTasksFinalizedByReport = false
+}
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+task cucumber() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--glue', 'com.cucumberTesting.tests.stepdef',
+                     'src/test/resources/cucumberTest/featureFiles/',
+                    '--plugin', 'html:executionReports/cucumberReports/report.html',
+                    '--plugin', 'json:executionReports/cucumberReports/cucumber.json',
+                    '--plugin', 'rerun:executionReports/cucumberReports/rerun.txt',
+                    '--plugin',"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+                  ]
+        }
+    }
+}

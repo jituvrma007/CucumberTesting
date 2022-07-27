@@ -1,0 +1,31 @@
+[
+  {
+    "controllerName": "jsonPlaceholderTypicodeCom",
+    "apiList": [
+      {
+        "apiName": "makePosts",
+        "endpoint": "/posts"
+      },
+      {
+        "apiName": "getPostsWithUserId",
+         "endpoint": "/posts/${0}"
+      },
+      {
+        "apiName": "commentOnPosts",
+        "endpoint": "/comments"
+      },
+      {
+        "apiName": "getCommentsOnPostsUsingPostIdAndId",
+        "endpoint": "/comments?postId=${0}&id=${1}"
+      },
+      {
+        "apiName": "ListOfUsers",
+        "endpoint": "/users"
+      },
+      {
+        "apiName": "detailOfExistingUserFromUserId",
+        "endpoint": "/users/${0}"
+      }
+    ]
+  }
+]

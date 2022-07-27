@@ -64,7 +64,7 @@ Here are a below steps to get a human readable html report.
 5) Find the html based extentReport inside "/extentReport" directory.
 ````
 
-##Solution include
+## Solution include
 1. Logging -> On console screen and under "executionReports\generatedLogs\Logs.log" directory.
 
 2. Generating html human readable report -> Yes, html reports are being generated with using utility ExtentReports and CucumberReports. It is covering the detailed steps, pass/fail/skipped results and with the respective time line. It is super easy to understand and to analyze supports detailed charts as well.

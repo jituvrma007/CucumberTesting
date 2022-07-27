@@ -84,7 +84,7 @@ gradlew cucumber
 4) Configure a "HOST" variable as "local" in command prompt or in edit configuration (if running via IDE) --> This variable is read for the configuration then our tests will targetted locally.
 5) Start local server manually --> "json-server --watch db.json"
 
- ![image](https://user-images.githubusercontent.com/5866143/181182813-3b02800e-3392-41b7-b3ac-a3b9cc0c3219.png)  
+ ![image](https://user-images.githubusercontent.com/5866143/181242544-3943ca33-14bc-4d9f-8719-dc872aa2d8fd.png)
 
 
 ## Reports

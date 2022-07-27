@@ -30,17 +30,9 @@ dependencies {
 
 }
 
-ext{
-    suiteFile ='TagsRunnerTestSuite.xml'
-    if (project.hasProperty('regression')) {
-        suiteFile = "AllFeatureRunnerTestSuite.xml"
-    }
-}
-
 test {
     useTestNG() {
         scanForTestClasses = false
-       //suites "src/test/resources/cucumberTest/testSuites/" + suiteFile
     }
 }
 

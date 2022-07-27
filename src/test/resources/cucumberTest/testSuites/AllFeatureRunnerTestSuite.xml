@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cucumber Testing Suite" verbose="1" parallel="tests" thread-count="3" configfailurepolicy="continue">
+    <test name="jsonPlaceholderTypicodeCom Tests" annotations="JDK" preserve-order="true">
+        <classes>
+            <class name="com.cucumberTesting.tests.runner.ListOfUsersRunner"/>
+            <class name="com.cucumberTesting.tests.runner.CommentsOnPostsRunner"/>
+            <class name="com.cucumberTesting.tests.runner.MakePostsRunner"/>
+        </classes>
+    </test>
+</suite>

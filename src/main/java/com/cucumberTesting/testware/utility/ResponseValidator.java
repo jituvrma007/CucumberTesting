@@ -1,5 +1,6 @@
 package com.cucumberTesting.testware.utility;
 
+import java.io.File;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -7,7 +8,10 @@ import java.util.Set;
 import com.jayway.jsonpath.JsonPath;
 
 import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
+
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 
@@ -29,7 +33,7 @@ public class ResponseValidator {
 		if(format.equals("json")){
 			response.then().assertThat().contentType(ContentType.JSON)
 					.and()
-					.body(matchesJsonSchemaInClasspath(schemaFilePath));
+					.body(matchesJsonSchema(new File(schemaFilePath)));
 			return true;
 		}
 		return false;

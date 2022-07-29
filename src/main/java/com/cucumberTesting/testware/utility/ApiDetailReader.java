@@ -34,7 +34,6 @@ public class ApiDetailReader {
 
 			return "";
 		}
-//     returnCompleteUri("jsonPlaceholderTypicodeCom","jsonPlaceholderTypicodeCom", "ListOfUsers");
 	public String returnAPIsJsonFileContents(String jsonFileName) {
 		String json ="";
 		try {

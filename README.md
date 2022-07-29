@@ -82,7 +82,7 @@ gradlew cucumber
 1) Changes made to https://jsonplaceholder.typicode.com does not really add/update any data in the their backend system.
 2) Solution is to use some local mocked server with their data. please follow this [steps to install JSON-Server locally](https://www.npmjs.com/package/json-server) to setup the local server.
 3) Use the attached db.json file instead of creating the file, from the project home directory.
-4) Configure a "HOST" variable as "local" in command prompt or in edit configuration (if running via IDE) --> This variable is read for the configuration then our tests will targetted locally.
+4) Configure a "HOST" variable as "local" in command prompt or in edit configuration (if running via IDE) --> This variable is for the local configuration. Our tests will targetted locally.
 5) Start local server manually --> "json-server db.json"
 
  ![image](https://user-images.githubusercontent.com/5866143/181242544-3943ca33-14bc-4d9f-8719-dc872aa2d8fd.png)

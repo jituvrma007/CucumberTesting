@@ -3,7 +3,7 @@ This is a sample backend/Api automation project for testing restful APIs of a so
 
 ### A bit more about the project
 This project is covering some basic Api automation test framework and some sample test cases. Although, we can surely enhance it more with lots of robust features.
-Also, this project is developed/tested on Windows, however it is intented to work on any operating system, in case of issues, please fix the path inside utility/Constants.java
+Also, this project is developed/tested on Windows, however it is intented to work on any operating system, in case of issues, please fix the path inside "utility/Constants.java"
 
 ### Project structure
 ```
@@ -44,7 +44,7 @@ Here are the dependencies used in the project for development & testing perspect
 
 
 ## Solution include
-1. Abstraction Layers - Layers like, BaseSetup, Utility, Request API details, and Environment, testRunners are done. Since it is just a sample project, we can design and extend this framework to scale further
+1. Abstraction Layers - Layers like, BaseSetup, Utility, Request API details, and Environment, testRunners, schema and testSuites are done. Since it is just a sample project, we can design and extend this framework to scale further
 
 2. Run tests in parallel mode -> Yes from runner we are overriding the Dataprovider and making "parallel = true". if we remove this overridden method then we will be able to run one by one.
 
@@ -83,7 +83,7 @@ gradlew cucumber
 2) Solution is to use some local mocked server with their data. please follow this [steps to install JSON-Server locally](https://www.npmjs.com/package/json-server) to setup the local server.
 3) Use the attached db.json file instead of creating the file, from the project home directory.
 4) Configure a "HOST" variable as "local" in command prompt or in edit configuration (if running via IDE) --> This variable is read for the configuration then our tests will targetted locally.
-5) Start local server manually --> "json-server --watch db.json"
+5) Start local server manually --> "json-server db.json"
 
  ![image](https://user-images.githubusercontent.com/5866143/181242544-3943ca33-14bc-4d9f-8719-dc872aa2d8fd.png)
 

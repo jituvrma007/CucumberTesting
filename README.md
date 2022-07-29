@@ -3,6 +3,7 @@ This is a sample backend/Api automation project for testing restful APIs of a so
 
 ### A bit more about the project
 This project is covering some basic Api automation test framework and some sample test cases. Although, we can surely enhance it more with lots of robust features.
+Also, this project is developed/tested on Windows, however it is intented to work on any operating system, in case of issues, please fix the path inside utility/Constants.java
 
 ### Project structure
 ```

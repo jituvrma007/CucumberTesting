@@ -1,19 +1,19 @@
 package com.cucumberTesting.tests.runner;
 
+import com.cucumberTesting.testware.utility.Constants;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
-@CucumberOptions(
-        features = {"src/test/resources/cucumberTest/featureFiles/MakePosts.feature"},
-        glue = {"com.cucumberTesting.tests.stepdef"},
-        plugin = {
-                "html:executionReports/cucumberReports/report.html",
-                "json:executionReports/cucumberReports/cucumber.json",
-                "rerun:executionReports/cucumberReports/rerun.txt",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
-        })
-
+ @CucumberOptions(
+         features = {Constants.CUCUMBER_OPTIONS_FEATURES +"/MakePosts.feature"},
+         glue = {Constants.CUCUMBER_OPTIONS_GLUE},
+         plugin = {
+                 Constants.CUCUMBER_PLUGIN_HTML,
+                 Constants.CUCUMBER_PLUGIN_JSON,
+                 Constants.CUCUMBER_PLUGIN_RERUN,
+                 Constants.CUCUMBER_PLUGIN_EXTENT
+         })
 public class MakePostsRunner extends AbstractTestNGCucumberTests {
         @Override
         @DataProvider(parallel = true)

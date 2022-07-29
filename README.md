@@ -44,7 +44,7 @@ Here are the dependencies used in the project for development & testing perspect
 
 
 ## Solution include
-1. Abstraction Layers - Layers like, BaseSetup, Utility, Request API details, and Environment, testRunners, schema and testSuites are done. Since it is just a sample project, we can design and extend this framework to scale further
+1. Abstraction Layers - Layers like, BaseSetup, Utility, Request API details, Environment, testRunners, schema and testSuites are done. Since it is just a sample project, we can design and extend this framework to scale further
 
 2. Run tests in parallel mode -> Yes from runner we are overriding the Dataprovider and making "parallel = true". if we remove this overridden method then we will be able to run one by one.
 
@@ -81,7 +81,7 @@ gradlew cucumber
 ## Running on JSON-Server locally.
 1) Changes made to https://jsonplaceholder.typicode.com does not really add/update any data in the their backend system.
 2) Solution is to use some local mocked server with their data. please follow this [steps to install JSON-Server locally](https://www.npmjs.com/package/json-server) to setup the local server.
-3) Use the attached db.json file instead of creating the file, from the project home directory.
+3) Use the attached [db.json file](https://github.com/jituvrma007/CucumberTesting/blob/main/db.json) instead of creating the file, from the project home directory.
 4) Configure a "HOST" variable as "local" in command prompt or in edit configuration (if running via IDE) --> This variable is for the local configuration. Our tests will targetted locally.
 5) Start local server manually --> "json-server db.json"
 
